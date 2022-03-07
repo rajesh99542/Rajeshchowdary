@@ -212,13 +212,12 @@ article {
      font-size: 20px;
   }
   .home .home-content .mypic img{
-      max-height: 30%;
-      max-width: 40%;
-      margin-bottom: 0%;
+      height: 30%;
+      width: 40%;
+      margin-bottom: -10%;
       margin-left: 10%;
       size-adjust: cover;
-      min-width: 20%;
-      min-height: 10%;
+     
       transition: all 0.3s ease;
     
 
