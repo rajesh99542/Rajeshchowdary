@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Righteous', cursive;
+}
+
+ body {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-bar {
+  height: 70px;
+  background: #262626;
+}
+
+.logo {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.logo a,
+.logo a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #262626;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2ab1ce;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+	padding-left: 25%;
+	 
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+	.brand a img {
+		max-height: 60px;
+		margin-top: 5px;
+	}
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/*  home sec  */
+
+
+.home{
+    height: 90.5vh;
+    width: 100%;
+
+    background: conic-gradient(rgb(98, 62, 255), white, powderblue);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-repeat: no-repeat;
+    display: fixed;
+    background-color: transparent;
+  background-size: 100% 100%;
+  
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .home .home-content{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .home-content .media-icons{
+     float: left;
+     position: absolute;
+     margin-left: 8px;
+     margin-top: -150px;
+     font-size: 20px;
+  }
+  .home .home-content .mypic img{
+      max-height: 30%;
+      max-width: 60%;
+      margin-bottom: 0%;
+      margin-left: 10%;
+      size-adjust: cover;
+      min-width: 10%;
+      min-height: 10%;
+      transition: all 0.3s ease;
+    
+
+  }
+  .home .home-content .text{
+    margin-top: -16%;
+    margin-left: 8%;
+  }
+  .home .text-one{
+    font-size: 25px;
+    color: #01080f;
+  }
+  .home .text-two{
+    color: #0b1016;
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .home .text-three{
+    font-size: 30px;
+    margin: 5px 0;
+    color: #e2510d;
+  }
+  .home .text-three span{
+    color: #3a05fc;
+  }
+  @media (max-width: 150px){
+   .home{
+    width: 50%;
+  
+   }  
+  }
+  @media screen and (max-width: 699px) {
+    .text  {
+      display: block !important;
+      font-size: 100px;
+    }
+  }
+
+
+
+  /***** about *****/
+  .about{
+      background: #eee7e7;
+      min-width: 2%;
+  }
+  .row{
+      height: auto;
+      width: auto;
+     
+  }
+  .imageAboutPage {
+    height: auto;
+    max-width: 100%;
+    min-width: 100px;
+    width: 40%;
+    background-size: contain;
+    border-radius: 20px;
+    position: relative;
+}
+.text-center{
+   text-align: center;
+   background: #f5cc98;
+
+}
+.card {
+    min-width: 100px;
+    width: 50%;
+    height: 158px;
+    position: absolute;
+    margin-left: 36%;
+    margin-top: -40%;
+    background-image: linear-gradient(to top, #d6ea3d, #8ef283, #51f1c1, #54e9ea, #8cddf5);
+    border-radius: 30px;
+
+}
+.card  .col-md-6{
+
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+/***** Section *****/
+
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 8px 13px;
+  
+	background-color: #350bf3;
+	color: white;
+  border-radius: 5px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.8em;
+	text-align: center;
+	text-indent: 19px;
+  border: 2px solid transparent;
+
+  transition: all 0.4s ease;  cursor: pointer;
+}
+
+.buttonDownload:hover {
+	background-color: rgb(226, 68, 68);
+	color: white;
+  border-color: #4905e9;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #faf5f5;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #f2f8ef;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
+
+/***** End Section *****/
+
+
+
+
+
+
+
+.row-mt-3{
+    position: absolute;
+    max-width: 20px;
+}
+@media (max-width: 480px) {
+    .imageAboutPage {
+      background-image: url("rajesh3.png");
+      background-repeat: no-repeat;
+      background-size: contain ;
+    }
+  }
+  @media (min-width: 481px) {
+     .imageAboutPage {
+      background-image: url("rajesh3.png");
+      background-repeat: no-repeat;
+      background-size: contain ;
+    }
+  }
+  
+  /***** End Section *****/
+
+  /*****  skills *****/
+  .skills{
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  }
+  .skills h1{
+    text-align: center;
+    color: #fa0909;
+    text-decoration: solid;
+    text-decoration: underline;
+  }
+  .skills .container{
+    background: #d8deee;
+  }
+  .skills .skillset .symbols {
+    font-size: 20px;
+    margin-left: 30px;
+    color: white;
+    text-align: center;
+  }
+  .skills .skillset .box{
+    width: 80%;
+    height: 158px;
+    text-align: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    position: grid;
+    justify-content: flex-start;
+    background: rgb(254, 254, 255);
+    border-radius: 30px;
+  }
+  .skills .skillset .box h3{
+    margin-left: 2px;
+    text-decoration: underline;
+
+
+  }
+  .skills .skillset .box li{
+    margin-top: 7px;
+  }
+
+  
+  /***** End  skills *****/
+
+  /***** team *****/
+  /* Three columns side by side */
+  .heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .row{
+    background-color: #d8deee;
+  }
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.cardbox img{
+  border-radius: 50px;
+  
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+  
+  /***** End team *****/
+  /***** contact *****/
+  
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.formname{
+  font-size: 20px;
+  text-align: center;
+  margin-top: -10px;
+  color: white;
+
+}
+.contacticons{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 19px;
+  justify-content: flex-end;
+  position: grid;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.contacticons i {
+   color: white;
+}
+
+
+  
+  /***** End contact *****/
+  footer{
+    min-width: 100%;
+    max-width: fit-content;
+    background: #0a0a0a;
+    padding: 10px 0;
+    margin-top: -0px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+  }
+  footer .text span a{
+    font-weight: 500;
+    color: #FFF;
+  }
+  footer .text span a:hover{
+    text-decoration: underline;
+  }
