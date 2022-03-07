@@ -214,6 +214,7 @@ article {
   .home .home-content .mypic img{
       height: 30%;
       width: 40%;
+	  max-width: 40%;
       margin-bottom: -10%;
       margin-left: 10%;
       size-adjust: cover;
